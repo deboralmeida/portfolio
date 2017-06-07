@@ -1,48 +1,88 @@
+/* colors 
+
+light grey: #d3d3d3
+medium grey: #c0c0c0
+dark grey: #a9a9a9
+darker grey: #808080
+
+*/
+
 /* GENERAL */
-body{
+html, body{
+    background-color: #d3d3d3;
     font-family: sans-serif; 
-    padding-top: 10vh;
 }
 
-.col-md-6{
-    padding: 0px;
+/* LOGO */
+.logo{
+    width: 100px;
+    height: 100px;
+    background-color: #e54174;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    margin: 10px 50%;
 }
 
-/* TITLE */
-.title{
-    width: 100%;
-    height: 10vh;
-    background-color: #808080;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    /*border: 1px solid red;*/
+/* NAVIGATION */
+nav{
 }
 
-.title p{
-    font-size: 12pt;
-    line-height: 10vh;
-    color: white;
-    padding-left: 20%;
-    text-transform: capitalize;
-}
-
-/* GALLERY */
-.gallery{
-    width: 100%;
-    height: 90vh;
-    display: block;
-    /*border: 1px solid red;*/
-}
-
-img{
-    height: 90vh;
-    display: block;
+li{
+    width: 25%;
+    display: inline-block;
     float: left;
-    background-color: #D3D3D3;
+    padding: 5px 0;
+    background-color: #d3d3d3;
+    text-align: center;
+    font-size: 10pt;
+    color: #d46b7e;
+    cursor: pointer;
 }
 
-img + img {
-    background-color: #C0C0C0;
+li + li {
+    background-color: #c0c0c0;
 }
+
+li + li + li {
+    background-color: #a9a9a9;
+}
+
+li + li + li + li{
+    background-color: #808080;
+}
+
+/* CONTENT */
+.wrapper{
+    width: 100%;
+    height: 70vh;
+    display: block;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.illustration, .graphicDesign, .web, .info{
+    display: none;
+}
+
+.illustration .col-md-3, .graphicDesign .col-md-3, .web .col-md-3, .info .col-md-3 {
+    margin-top: 10vh;
+    height: 50vh;
+    display: inline-block;
+    border: 1px solid red;
+}
+
+.graphicDesign .col-md-3{
+    background-color: pink;
+}
+
+.web .col-md-3{
+    background-color: darkmagenta;
+}
+
+.info .col-md-3{
+    background-color: crimson;
+}
+
+
+::-webkit-scrollbar {display:none;}
