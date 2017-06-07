@@ -14,7 +14,8 @@ document.getElementById('illustration_btn').onclick = function() {
     } 
     
     document.getElementById('illustration_gallery').style.display = 'block';
-    
+    document.body.style.backgroundColor = '#d3d3d3';
+    document.getElementsByTagName('html')[0].style.backgroundColor = '#d3d3d3';
 }
 
 // GRAPHIC DESIGN BUTTON
@@ -33,6 +34,8 @@ document.getElementById('graphicDesign_btn').onclick = function() {
     } 
     
     document.getElementById('graphicDesign_gallery').style.display = 'block';
+    document.body.style.backgroundColor = '#c0c0c0';
+    document.getElementsByTagName('html')[0].style.backgroundColor = '#c0c0c0';
     
 }
 
@@ -52,6 +55,8 @@ document.getElementById('web_btn').onclick = function() {
     } 
     
     document.getElementById('web_gallery').style.display = 'block';
+    document.body.style.backgroundColor = '#a9a9a9';
+    document.getElementsByTagName('html')[0].style.backgroundColor = '#a9a9a9';
     
 }
 
@@ -71,6 +76,8 @@ document.getElementById('info_btn').onclick = function() {
     } 
     
     document.getElementById('moreInfo').style.display = 'block';
+    document.body.style.backgroundColor = '#808080';
+    document.getElementsByTagName('html')[0].style.backgroundColor = '#808080 ';
     
 }
 
