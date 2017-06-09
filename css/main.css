@@ -70,11 +70,10 @@ li + li + li + li{
     margin-top: 10vh;
     height: 50vh;
     display: inline-block;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     padding: 0;
+    float: left;
 }
-
-
 
 ::-webkit-scrollbar {display:none;}
 
@@ -99,3 +98,40 @@ li + li + li + li{
     background-repeat: no-repeat;
 }
 
+.ipcagj{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url('../images/thumbnail_ipcagj.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.info p{
+    color: white;
+    font-size: 9pt;
+    line-height: 9pt;
+}
+
+.info > .col-md-3{
+    padding-left: 10%;
+}
+
+.title{
+    text-transform: uppercase;
+}
+
+p + .title{
+    margin-top: 30px;
+}
+
+.selected{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;  
+}
+
+.notSelected{
+    border-bottom: 1px solid black;
+}
