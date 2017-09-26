@@ -1,3 +1,27 @@
+/* $(window).mousewheel(function(event, delta) {
+event.preventDefault();
+var scroll = $(window).scrollLeft();
+$(window).scrollLeft(scroll – (delta * 30));
+}); */
+
+/*
+
+var scroll = document.getElementById('wrapper').scrollLeft();
+var merda = document.getElementById('wrapper').scrollLeft(scroll - (delta * 30))
+
+event.preventDefault();
+    
+    document.getElementById('wrapper').scrollLeft(scroll - (delta * 30));*/
+
+
+
+document.getElementById('illustration_gallery').addEventListener("wheel", function(){
+    
+    var scroll = document.getElementById('illustration_gallery').scrollLeft();
+    document.getElementById('illustration_gallery').scrollLeft(scroll - (delta * 30));
+    
+});
+
 // ILLUSTRATION BUTTON
 document.getElementById('illustration_btn').onclick = function () {
     

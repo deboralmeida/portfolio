@@ -25,6 +25,10 @@ html, body{
 
 /* NAVIGATION */
 nav{
+    position: absolute;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
 }
 
 li{
@@ -60,16 +64,20 @@ li + li + li + li{
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    border: 1px solid blue;
 }
 
 .illustration, .graphicDesign, .web, .info{
     display: none;
+    width: 500%;
+    height: 70vh;
+    border: 1px solid red;
 }
 
 .illustration .col-md-3, .graphicDesign .col-md-3, .web .col-md-3, .info .col-md-3 {
     margin-top: 10vh;
     height: 50vh;
-    display: inline-block;
+    display: inline-flex;
     /*border: 1px solid red;*/
     padding: 0;
     float: left;
@@ -134,4 +142,9 @@ p + .title{
 
 .notSelected{
     border-bottom: 1px solid black;
+}
+
+.col-md-3{
+    border: 1px solid red;
+    width: 350px;
 }
