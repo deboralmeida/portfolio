@@ -4,14 +4,20 @@ var scroll = 0;
 document.getElementById('wrapper').addEventListener('wheel', function(e) {
         
         if (e.deltaY < 0) {
-            scroll = scroll + 100;
-            this.scrollTo(scroll, 0);
+            scroll = scroll + 400;
+            this.scroll({
+                left: scroll, 
+                behavior: 'smooth' 
+            });
             //console.log('scrolling up');  
         }
     
         if (e.deltaY > 0) {  
-            scroll = scroll - 100;
-            this.scrollTo(scroll, 0);
+            scroll = scroll - 400;
+            this.scroll({
+                left: scroll, 
+                behavior: 'smooth' 
+            });
             //console.log('scrolling down');    
         }
 
@@ -19,6 +25,7 @@ document.getElementById('wrapper').addEventListener('wheel', function(e) {
             scroll = 0;
         }
  });
+
 
 // ILLUSTRATION BUTTON
 document.getElementById('illustration_btn').onclick = function () {
