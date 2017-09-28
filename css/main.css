@@ -61,17 +61,16 @@ li + li + li + li{
     width: 100%;
     height: 70vh;
     display: block;
-    overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 }
 
 .illustration, .graphicDesign, .web, .info{
     display: none;
     width: 500%;
     height: 70vh;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .illustration .col-md-3, .graphicDesign .col-md-3, .web .col-md-3, .info .col-md-3 {
@@ -145,6 +144,5 @@ p + .title{
 }
 
 .col-md-3{
-    border: 1px solid red;
     width: 350px;
 }

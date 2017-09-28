@@ -1,26 +1,24 @@
-/* $(window).mousewheel(function(event, delta) {
-event.preventDefault();
-var scroll = $(window).scrollLeft();
-$(window).scrollLeft(scroll – (delta * 30));
-}); */
+// HORIZONTAL SCROLL 
+var scroll = 0;
 
-/*
-
-var scroll = document.getElementById('wrapper').scrollLeft();
-var merda = document.getElementById('wrapper').scrollLeft(scroll - (delta * 30))
-
-event.preventDefault();
+document.getElementById('wrapper').addEventListener('wheel', function(e) {
+        
+        if (e.deltaY < 0) {
+            scroll = scroll + 100;
+            this.scrollTo(scroll, 0);
+            //console.log('scrolling up');  
+        }
     
-    document.getElementById('wrapper').scrollLeft(scroll - (delta * 30));*/
+        if (e.deltaY > 0) {  
+            scroll = scroll - 100;
+            this.scrollTo(scroll, 0);
+            //console.log('scrolling down');    
+        }
 
-
-
-document.getElementById('illustration_gallery').addEventListener("wheel", function(){
-    
-    var scroll = document.getElementById('illustration_gallery').scrollLeft();
-    document.getElementById('illustration_gallery').scrollLeft(scroll - (delta * 30));
-    
-});
+        if (scroll < 0){
+            scroll = 0;
+        }
+ });
 
 // ILLUSTRATION BUTTON
 document.getElementById('illustration_btn').onclick = function () {
@@ -35,18 +33,14 @@ document.getElementById('illustration_btn').onclick = function () {
 
     
 
-    if (document.getElementById('graphicDesign_gallery').style.display == 'block') {
-        
-        document.getElementById('graphicDesign_gallery').style.display = 'none';
-        
-    } else if (document.getElementById('web_gallery').style.display == 'block') {
-        
-        document.getElementById('web_gallery').style.display = 'none';
-        
-    } else if (document.getElementById('moreInfo').style.display == 'block') {
-        
+    if (document.getElementById('graphicDesign_gallery').style.display == 'block') {   
+        document.getElementById('graphicDesign_gallery').style.display = 'none';      
+    } 
+    else if (document.getElementById('web_gallery').style.display == 'block') {       
+        document.getElementById('web_gallery').style.display = 'none';     
+    } 
+    else if (document.getElementById('moreInfo').style.display == 'block') {
         document.getElementById('moreInfo').style.display = 'none';
-        
     }
 
     document.getElementById('illustration_gallery').style.display = 'block';
@@ -57,6 +51,7 @@ document.getElementById('illustration_btn').onclick = function () {
     this.classList.add('selected');
 
 }
+
 // GRAPHIC DESIGN BUTTON
 document.getElementById('graphicDesign_btn').onclick = function() {
     
@@ -71,11 +66,9 @@ document.getElementById('graphicDesign_btn').onclick = function() {
     if ( document.getElementById('illustration_gallery').style.display == 'block' ){
          document.getElementById('illustration_gallery').style.display = 'none';       
     } 
-    
     else if ( document.getElementById('web_gallery').style.display == 'block' ){       
          document.getElementById('web_gallery').style.display = 'none';     
     } 
-    
     else if ( document.getElementById('moreInfo').style.display == 'block' ){    
          document.getElementById('moreInfo').style.display = 'none';      
     } 
@@ -103,11 +96,9 @@ document.getElementById('web_btn').onclick = function() {
     if (  document.getElementById('illustration_gallery').style.display == 'block' ){
          document.getElementById('illustration_gallery').style.display = 'none';       
     } 
-    
     else if (  document.getElementById('graphicDesign_gallery').style.display == 'block' ){
          document.getElementById('graphicDesign_gallery').style.display = 'none';     
     } 
-    
     else if (  document.getElementById('moreInfo').style.display == 'block' ){    
          document.getElementById('moreInfo').style.display = 'none';      
     } 
@@ -135,11 +126,9 @@ document.getElementById('info_btn').onclick = function() {
     if (  document.getElementById('illustration_gallery').style.display == 'block' ){
          document.getElementById('illustration_gallery').style.display = 'none';       
     } 
-    
     else if (  document.getElementById('graphicDesign_gallery').style.display == 'block' ){
          document.getElementById('graphicDesign_gallery').style.display = 'none';     
     } 
-    
     else if (  document.getElementById('web_gallery').style.display == 'block' ){       
          document.getElementById('web_gallery').style.display = 'none';         
     } 
