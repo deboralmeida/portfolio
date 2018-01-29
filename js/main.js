@@ -1,29 +1,60 @@
 // HORIZONTAL SCROLL 
 var scroll = 0;
+var bar = 10;
 
 document.getElementById('wrapper').addEventListener('wheel', function(e) {
         
-        if (e.deltaY < 0) {
-            scroll = scroll + 400;
-            this.scroll({
-                left: scroll, 
-                behavior: 'smooth' 
-            });
-            //console.log('scrolling up');  
+    //scroll up = scroll right
+    if (e.deltaY < 0) {
+        scroll = scroll + 400;
+        this.scroll({
+            left: scroll, 
+            behavior: 'smooth' 
+        });
+        //console.log('scrolling up');
+            
+        //scrollbar grow + test
+        //don't let bar go over 100%
+        if (bar == 100){
+            bar = 100;
+            document.getElementById('grow').style.width = bar+"%";
+            console.log(bar);
+        } 
+        else {
+            bar = bar + 10;
+            document.getElementById('grow').style.width = bar+"%";
+            console.log(bar);
         }
-    
-        if (e.deltaY > 0) {  
-            scroll = scroll - 400;
-            this.scroll({
-                left: scroll, 
-                behavior: 'smooth' 
-            });
-            //console.log('scrolling down');    
-        }
-
-        if (scroll < 0){
-            scroll = 0;
-        }
+                
+    }
+    //scroll down = scroll left
+    if (e.deltaY > 0) {  
+        scroll = scroll - 400;
+        this.scroll({
+            left: scroll, 
+            behavior: 'smooth' 
+        });
+        //console.log('scrolling down');  
+            
+        //scrollbar grow - test
+        //don't let bar go under 10
+        if (bar == 10) {
+            bar = 10;
+            document.getElementById('grow').style.width = bar+"%";
+            console.log(bar);
+        } else if (bar <= 100){
+            bar = bar - 10;
+            document.getElementById('grow').style.width = bar+"%";
+            console.log(bar);
+        } 
+            
+    }
+        
+    //scroll can't go under 0
+    if (scroll < 0){
+        scroll = 0;
+    }
+        
  });
 
 
