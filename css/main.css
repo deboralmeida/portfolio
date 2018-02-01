@@ -1,59 +1,40 @@
-/* colors 
-
-light grey: #d3d3d3
-medium grey: #c0c0c0
-dark grey: #a9a9a9
-darker grey: #808080
-
-*/
-
 /* GENERAL */
 html, body{
-    background-color: #d3d3d3;
+    background-color: #BFBFBF   ;
     font-family: 'Questrial', sans-serif;
+    font-size: 10px;
 }
 
-/* LOGO */
+
+/* HEADER */
+header{
+    height: 20vh;
+    width: 100%;
+    padding: 2.5vh;
+    
+    background-color: ligh
+    
+}
+
 .logo{
-    width: 100px;
-    height: 100px;
-    background-color: #e54174;
+    width: 15vh;
+    height: 15vh;
+    background-color: #FF6600;
     border-radius: 50%;
     transform: translateX(-50%);
-    margin: 10px 50%;
+    margin-left: 50%;
 }
+
 
 /* NAVIGATION */
 nav{
-    position: absolute;
-    left: 0;
-    z-index: 9999;
     width: 100%;
+    height: 5vh;
+    background-color: black;
 }
 
-li{
-    width: 25%;
-    display: inline-block;
-    float: left;
-    padding: 5px 0;
-    background-color: #d3d3d3;
-    text-align: center;
-    font-size: 10pt;
-    text-transform: uppercase;
-    color: #d46b7e;
-    cursor: pointer;
-}
-
-li + li {
-    background-color: #c0c0c0;
-}
-
-li + li + li {
-    background-color: #a9a9a9;
-}
-
-li + li + li + li{
-    background-color: #808080;
+#graphiclink{
+    color: #ffffff;
 }
 
 /* CONTENT */
@@ -66,97 +47,43 @@ li + li + li + li{
     /*border: 1px solid blue;*/
 }
 
-.illustration, .graphicDesign, .web, .info{
-    display: none;
-    width: 500%;
-    height: 70vh;
-    /*border: 1px solid red;*/
+.gallery{
+    height: calc( 70vh - 1px);
+    width: calc( calc( 70vh - 1px) * 9 );
 }
 
-.illustration .col-md-3, .graphicDesign .col-md-3, .web .col-md-3, .info .col-md-3 {
-    margin-top: 10vh;
-    height: 50vh;
-    display: inline-flex;
-    /*border: 1px solid red;*/
-    padding: 0;
+.PROJECT_CLASS{
+    background-color: aquamarine;
+    height: calc( 70vh - 1px);
+    width: calc( 70vh - 1px);
+    border-right: 1px solid black;
+    display: inline;
     float: left;
 }
 
 ::-webkit-scrollbar {display:none;}
 
-/* WEB*/
-.steam{
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-image: url('../images/thumbnail_steam.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
-.starkiller{
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-image: url('../images/thumbnail_starkiller.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.ipcagj{
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-image: url('../images/thumbnail_ipcagj.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.info p{
-    color: white;
-    font-size: 9pt;
-    line-height: 9pt;
-}
-
-.info > .col-md-3{
-    padding-left: 10%;
-}
-
-.title{
-    text-transform: uppercase;
-}
-
-p + .title{
-    margin-top: 30px;
-}
-
-.selected{
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;  
-}
-
-.notSelected{
-    border-bottom: 1px solid black;
-}
-
-.col-md-3{
-    width: 350px;
-}
-
-
-/* SCROLLBAR */
+/* INDICATIVE SCROLLBAR */
 .bar{
     background-color: dimgrey;
-    height: 3px;
+    height: 1px;
     width: 100%;
+    position: fixed;
 }
 
 .grow{
-    background-color: black;
-    height: 3px;
-    width: 10%;
+    background-color: pink;
+    height: 1px;
+    width: 100%;
+    position:absolute;
+    left: -90vw;
+}
+
+/* SOCIAL */
+footer{
+    height: 5vh;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
 }
