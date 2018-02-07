@@ -44,7 +44,7 @@ html, body{
 /* PROJECT NAV */
 .projectNav{
     width: 100vw;
-    height: 5vh;
+    height: 10vh;
     /*background-color: olive;*/
     display: block;
     position: fixed;
@@ -59,6 +59,7 @@ html, body{
     border: 1px solid white;
     display: inline-block;
     margin: 5px;
+    cursor: pointer;
     /*padding: 2px;
     background-clip: content-box;*/
     transition: all 0.5s 0.2s;
@@ -68,3 +69,9 @@ html, body{
     background-color: white;
     transition: all 0.5s 0.2s;
 }
+
+.link{
+    display: inline-block;
+    cursor: pointer;
+}
+

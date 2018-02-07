@@ -75,3 +75,29 @@ document.getElementById('wrapper').addEventListener('wheel', function(e) {
     }
        
  });
+
+
+//UPDATE VALUES WHEN WINDOW IS RESIZED
+window.addEventListener("resize", function(){
+    
+    scrollW = document.getElementById('projecto').clientWidth;
+    maxScroll = document.getElementById('gallery').clientWidth;
+    
+});
+
+
+// PROJECT TAGS
+//click > ler tag
+//esconder o resto
+
+Array.from(document.getElementsByClassName('link')).forEach(function (element){
+    
+    element.onclick = function(){
+        
+        var tags = this.textContent;
+        
+        console.log(tags);
+        
+    };
+    
+});
