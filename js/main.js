@@ -1,6 +1,7 @@
 // ENABLE HORIZONTAL SCROLL 
 // AND HIGHLIGHT CURRENT PROJECT
 var projNum = document.getElementsByClassName('projecto').length -1;
+var gallery = document.getElementById('gallery');
 var galleryW = document.getElementById('gallery').style.width = "calc( 100% *"+projNum+")";
 
 var projW = document.querySelectorAll('.projecto');
@@ -158,35 +159,66 @@ Array.from(document.getElementsByClassName('link')).forEach(function (element){
 });
 
 
-// GRID DISPLAY
+// GRID DISPLAY TOGGLE
 var grid = document.getElementById('grid');
+var smth = document.querySelectorAll('.projecto');
 
 grid.addEventListener('click', function(){
     
-    //change gallery width
-    document.getElementById('gallery').style.width = "100%";
-    var windW = document.getElementById('gallery').offsetWidth;
-    var windH = document.getElementById('gallery').offsetHeight;
-    //numero de projectos / área
-    var area = Math.sqrt(windH*windW);
-    var size = area/projNum;
+    if(gallery.style.width !== "100%"){
+        //change gallery width
+        document.getElementById('gallery').style.width = "100%";
 
-    var projNum2 = document.getElementsByClassName('projecto').length/3;
-    
-    var smth = document.querySelectorAll('.projecto');
-    
-    //change projects size and display
-    for(var i = 0; i < smth.length; i++){
-        smth[i].style.width = "calc(100%/"+projNum2+")"; 
-        smth[i].style.height = "calc(100%/3)"; 
+        var projSize = Math.sqrt(projNum+1);
         
-        smth[i].style.display = "block"; 
-    };
-    
-    //hide balls
-    for(var i = 0; i < ball.length; i++){
-        ball[i].style.display = "none";
-        document.getElementById('tagList').style.display = "none";
-    };
-    
+
+        if (projSize !== Math.floor(projSize)) {
+
+            var projH = Math.ceil(projSize);
+            var projW = Math.ceil((projNum+1)/projH)
+
+            for(var i = 0; i < smth.length; i++){
+            smth[i].style.width = 100/projW+"%"; 
+            smth[i].style.height = 100/projH+"%"; 
+
+            smth[i].style.display = "block"; 
+            };
+
+        } else {
+
+            //change projects size and display
+            for(var i = 0; i < smth.length; i++){
+                smth[i].style.width = 100/projSize+"%"; 
+                smth[i].style.height = 100/projSize+"%"; 
+
+                smth[i].style.display = "block"; 
+            };
+
+            //hide balls
+            for(var i = 0; i < ball.length; i++){
+                ball[i].style.display = "none";
+            };
+
+        }
+        
+    } else {
+        
+        //change gallery width
+        galleryW = document.getElementById('gallery').style.width = "calc( 100% *"+projNum+")";
+
+        for(var i = 0; i < smth.length; i++){
+            smth[i].style.width = 100+"vw"; 
+            smth[i].style.height = 100+"vh"; 
+
+            smth[i].style.display = "inline-block";
+            smth[i].style.float = "left";
+        };
+
+            //hide balls
+        for(var i = 0; i < ball.length; i++){
+                ball[i].style.display = "inline-block";
+        };
+
+    }
+        
 })
